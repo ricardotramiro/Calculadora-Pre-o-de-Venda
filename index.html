@@ -1,28 +1,54 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
     <title>Calculadora Preço de Venda</title>
-</head>
-<body>
-  <div class="container">
-    <h1>Calculadora Preço de Venda</h1>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Calculadora Preço de Venda</h1>
+      <div class="input-group">
+        <label>Custo por Unidade (R$)</label>
+        <input type="number" id="custo" placeholder="Ex: 4.00" step="0.01" />
+      </div>
+      <div class="input-group">
+        <label>Unidades</label>
+        <input type="number" id="quantidade" placeholder="Ex: 100" />
+      </div>
 
-    <label for="custo">Custo por item (R$):</label>
-    <input type="number" id="custo" placeholder="Ex: 10.50">
+      <div class="input-group">
+        <label>Taxa da Plataforma (%)</label>
+        <input type="number" id="taxa-plataforma" value="10" step="0.1" />
+      </div>
 
-    <label for="qtdMensal">Quantidade mensal de itens:</label>
-    <input type="number" id="qtdMensal" placeholder="Ex: 100">
+      <div class="input-group">
+        <label>Taxa de Antecipação (%)</label>
+        <input type="number" id="taxa-antecipacao" value="1.59" step="0.01" />
+      </div>
 
-    <button id="calcular">Calcular</button>
+      <div class="input-group">
+        <label>Mensalidade (R$)</label>
+        <input type="number" id="mensalidade" value="150" step="0.01" />
+      </div>
 
-    <div id="resultado"></div>
-  </div>
-<script src="script.js"></script>
-</body>
+      <button id="calcular">Calcular Preço de Venda</button>
+
+      <div class="resultado">
+        <h2>Resultado</h2>
+        <p>Preço de Venda por Unidade: <span id="preco-venda">--</span></p>
+        <p>
+          Taxa por Unidade (Mensalidade): <span id="taxa-mensalidade">--</span>
+        </p>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>
