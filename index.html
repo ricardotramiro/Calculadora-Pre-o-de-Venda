@@ -15,40 +15,51 @@
   <body>
     <div class="container">
       <h1>Calculadora Preço de Venda</h1>
+
+      <!-- Custo do Produto -->
       <div class="input-group">
-        <label>Custo por Unidade (R$)</label>
-        <input type="number" id="custo" placeholder="Ex: 4.00" step="0.01" />
-      </div>
-      <div class="input-group">
-        <label>Unidades</label>
-        <input type="number" id="quantidade" placeholder="Ex: 100" />
+        <label for="productCost">Receber por unidade (R$)</label>
+        <input type="number" id="productCost" placeholder="Ex: 4.00" step="0.01" />
       </div>
 
+      <!-- Unidades -->
       <div class="input-group">
-        <label>Taxa da Plataforma (%)</label>
-        <input type="number" id="taxa-plataforma" value="10" step="0.1" />
+        <label for="units">Unidades</label>
+        <input type="number" id="units" placeholder="Ex: 100" />
       </div>
 
+     <!-- Comissão sobre pedidos -->
       <div class="input-group">
-        <label>Taxa de Antecipação (%)</label>
-        <input type="number" id="taxa-antecipacao" value="1.59" step="0.01" />
+        <label for="commission">Comissão sobre pedidos (%)</label>
+        <input type="number" id="commission" value="23" step="0.1" />
       </div>
 
+      <!-- Taxa para pedido pago pelo app -->
       <div class="input-group">
-        <label>Mensalidade (R$)</label>
-        <input type="number" id="mensalidade" value="150" step="0.01" />
+        <label for="platformFee">Taxa para pedido pago via app (%)</label>
+        <input type="number" id="platformFee" value="3.2" step="0.1" />
       </div>
 
-      <button id="calcular">Calcular Preço de Venda</button>
-
-      <div class="resultado">
-        <h2>Resultado</h2>
-        <p>Preço de Venda por Unidade: <span id="preco-venda">--</span></p>
-        <p>
-          Taxa por Unidade (Mensalidade): <span id="taxa-mensalidade">--</span>
-        </p>
+      <!-- Taxa de antecipação -->
+      <div class="input-group">
+        <label for="anticipationFee">Taxa de Antecipação (%)</label>
+        <input type="number" id="anticipationFee" value="1.59" step="0.01" />
       </div>
+
+      <!-- Mensalidade -->
+      <div class="input-group">
+        <label for="monthlyFee">Mensalidade (R$)</label>
+        <input type="number" id="monthlyFee" value="150.00" step="0.01" />
+      </div>
+
+      <!-- Botões -->
+      <button id="calculate">Calcular</button>
+      <button id="to-clean" class="reset">Limpar</button>
+      
+      <!-- Resultado -->
+      <div id="result" class="result-card"></div>
     </div>
+
     <script src="script.js"></script>
   </body>
 </html>
