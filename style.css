@@ -54,7 +54,7 @@ h1 {
   transition: border 0.3s;
 }
 
-/* efeito ao focar no campo */
+/* Efeito ao focar no campo */
 .input-group input:focus {
   border-color: #007bff;
   outline: none;
@@ -140,5 +140,40 @@ font-weight: 500;
 
   h1 {
     font-size: 20px;
+  }
+}
+
+/* Responsividade para Apple Watch */
+@media screen and (max-width: 300px) {
+  body {
+    font-size: 12px;
+    padding: 5px;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 14px;
+  }
+
+  input, button {
+    width: 100%;
+    font-size: 12px;
+    padding: 5px;
+    margin: 3px 0;
+  }
+
+  #preco-venda {
+    font-size: 16px;
+  }
+
+  #mensagem {
+    font-size: 12px;
+    margin-top: 5px;
+  }
+
+  .container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 5px;
   }
 }
